@@ -13,12 +13,15 @@ Version: 1.0.0-BETA
 This is a maven project so you will need maven. The project is set up to create a JAR file with dependencies.
 Since it is written in Java you will need JDK too. I'm not sure about the min SDK level, it's probably 1.5 .
 Currently there is no maven repo for this library.
+
 To build: 
 `mvn package`
+
 To create docs and test reports:
 `mvn site`
 
 Javadoc will be available soon here:
+
 https://github.com/dr-chase-g3ka1/KanaParserLib/apidocs/
 
 ### Contribution guidelines ###
