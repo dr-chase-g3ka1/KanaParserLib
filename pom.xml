@@ -4,7 +4,7 @@
 
     <groupId>com.chase</groupId>
     <artifactId>KanaParserLib</artifactId>
-    <version>1.0.0-BETA</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
     
     <name>KanaParserLib</name>
@@ -53,7 +53,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <mainClass>com.chase.hiraganakatakanaparser.MainApp</mainClass>
         <project.build.directory>target</project.build.directory>
     </properties>
 
@@ -82,17 +81,7 @@
     </dependencies>
         
 
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>1.6.0</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-        
+    <build>      
         <plugins>          
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -121,9 +110,6 @@
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <archive>
-                        <manifest>
-                            <mainClass>com.chase.hiraganakatakanaparser.MainApp</mainClass>
-                        </manifest>
                         <manifestEntries>
                             <Class-Path>.</Class-Path> 
                         </manifestEntries>
