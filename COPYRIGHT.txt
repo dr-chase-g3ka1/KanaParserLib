@@ -1,0 +1,19 @@
+Copyright © 2017 Levente Daradics
+
+    This project includes sub-components with separate copyright notices and license terms.
+    Compliance with all copyright laws and software license agreements included 
+    in the notice section of this file are the responsibility of the user.
+
+Found a bug? Please [help us fix it](opens bug report form).
+
+By using this application, you agree to our [terms and services](opens dialog).
+
+This app uses the following open-source libraries:
+
+Gson Copyright 2008-2017 Google Inc. Licensed under the Apache License, Version 2.0
+https://github.com/google/gson
+
+Guava Copyright 2009-2017 Google Inc. Licensed under the Apache License, Version 2.0
+https://github.com/google/guava/blob/master/pom.xml
+
+Library Bar copyright and license
