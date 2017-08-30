@@ -41,6 +41,7 @@ import java.io.Reader;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 /**
  *
@@ -155,5 +156,15 @@ public class Utils {
             e.printStackTrace();
             return null;
         }
+    }
+    
+    public static InputStream getInputStreamFromResource(String path)   {
+        InputStream is = Utils.class.getResourceAsStream("/" + path);
+        return is;
+    }
+    
+    public static Scanner makeScannerFromResource(String path)  {
+        Scanner sc = new Scanner(getInputStreamFromResource(path), "utf-8");
+        return sc;
     }
 }
