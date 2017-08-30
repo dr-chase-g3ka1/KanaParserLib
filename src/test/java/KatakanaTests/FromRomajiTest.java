@@ -5,7 +5,7 @@
  */
 package KatakanaTests;
 
-import com.chase.hiraganakatakanaparser.RomajiLettersKat;
+import com.chase.katakana.RomajiLettersKat;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;

@@ -24,7 +24,7 @@
     Licensed under the Apache License, Version 2.0
     
  */
-package com.chase.hiraganakatakanaparser;
+package com.chase.utils;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;

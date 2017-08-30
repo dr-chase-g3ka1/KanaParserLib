@@ -5,7 +5,7 @@
  */
 package HiraganaTests;
 
-import com.chase.hiraganakatakanaparser.RomajiLettersHir;
+import com.chase.hiragana.RomajiLettersHir;
 import org.junit.*;
 import static org.junit.Assert.*;
 

@@ -5,7 +5,7 @@
  */
 package HiraganaTests;
 
-import com.chase.hiraganakatakanaparser.HiraganaLetters;
+import com.chase.hiragana.HiraganaLetters;
 import org.junit.*;
 import static org.junit.Assert.*;
 
