@@ -28,7 +28,7 @@ https://github.com/dr-chase-g3ka1/KanaParserLib/apidocs/
 
 Feel free to find bugs and give suggestions.
 
-### Who do I talk to? ###
+### Found a bug? ###
 
 Issue tracking is here:
 https://github.com/dr-chase-g3ka1/KanaParserLib/issues
