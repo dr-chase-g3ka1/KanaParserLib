@@ -1,6 +1,14 @@
 # README #
 
-A Java library for kana parsing.
+A Java library for parsing Japanese kana (Hiragana/Katakana) to latin letters.
+
+## On experimental-branch: ##
+There is an additional feature of building a kanji database with english translation and readings, but it is a Work-in-progress.
+This is needed to parse Japanese kanji characters to latin letters, this is a planned feature. This feature has not reached alpha stage.
+The app is using a free cloud base postgreSQL database.
+KANJIDIC Copyright (C) 2015 The Electronic Dictionary Research and Development Group.
+legal info for kanjidic: http://www.edrdg.org/
+
 
 ### What is this repository for? ###
 
