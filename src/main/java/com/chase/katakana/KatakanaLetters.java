@@ -22,6 +22,7 @@
  */
 package com.chase.katakana;
 
+import com.chase.hiragana.RomajiLettersHir;
 import com.chase.utils.Utils;
 import com.google.common.collect.BiMap;
 
@@ -51,9 +52,15 @@ public class KatakanaLetters {
      * This is because of the singleton pattern.
      * @return an instance of this class.
      */
-    public static KatakanaLetters getInstance() {
-        if (uniqueInstance == null)  {
-            return new KatakanaLetters();
+    public static KatakanaLetters getInstance()    {
+        if(uniqueInstance == null)  {
+        	synchronized (KatakanaLetters.class)	{
+        		 if(uniqueInstance == null)  {
+        			 uniqueInstance = new KatakanaLetters();
+        		 }
+        		
+        	}
+            
         }
         return uniqueInstance;
     }

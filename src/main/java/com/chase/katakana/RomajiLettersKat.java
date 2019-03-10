@@ -49,7 +49,13 @@ public class RomajiLettersKat {
     
     public static RomajiLettersKat getInstance()    {
         if(uniqueInstance == null)  {
-            uniqueInstance = new RomajiLettersKat();
+        	synchronized (RomajiLettersKat.class)	{
+        		 if(uniqueInstance == null)  {
+        			 uniqueInstance = new RomajiLettersKat();
+        		 }
+        		
+        	}
+            
         }
         return uniqueInstance;
     }

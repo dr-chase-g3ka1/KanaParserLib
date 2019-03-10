@@ -35,7 +35,7 @@ import com.google.common.collect.BiMap;
  * @author Levente Daradics
  */
 public class HiraganaLetters {
-    private static HiraganaLetters uniqueInstanceHLN;
+    private volatile static HiraganaLetters uniqueInstanceHLN;
 
     private volatile BiMap<Character, String> mapHiraganaKeyRomanjiValue;
     private volatile BiMap<String, String> mapHiraganaDigraphs;
@@ -129,9 +129,15 @@ public class HiraganaLetters {
      * This is because of the singleton pattern.
      * @return an instance of this class.
      */
-    public static HiraganaLetters getInstance()   {
-        if (uniqueInstanceHLN == null)  {
-            uniqueInstanceHLN = new HiraganaLetters();
+    public static HiraganaLetters getInstance()    {
+        if(uniqueInstanceHLN == null)  {
+        	synchronized (HiraganaLetters.class)	{
+        		 if(uniqueInstanceHLN == null)  {
+        			 uniqueInstanceHLN = new HiraganaLetters();
+        		 }
+        		
+        	}
+            
         }
         return uniqueInstanceHLN;
     }

@@ -30,7 +30,7 @@ import com.google.common.collect.BiMap;
  * @author Levente Daradics
  */
 public class RomajiLettersHir {
-    protected static RomajiLettersHir uniqueInstance;
+    protected volatile static RomajiLettersHir uniqueInstance;
     
     private volatile BiMap<String, Character> mapRomajiKeyHiraganaValue;
     private volatile BiMap<String, String> mapRomajiToHiraganaDigraphs;
@@ -52,7 +52,13 @@ public class RomajiLettersHir {
     }
     public static RomajiLettersHir getInstance()    {
         if(uniqueInstance == null)  {
-            uniqueInstance = new RomajiLettersHir();
+        	synchronized (RomajiLettersHir.class)	{
+        		 if(uniqueInstance == null)  {
+        			 uniqueInstance = new RomajiLettersHir();
+        		 }
+        		
+        	}
+            
         }
         return uniqueInstance;
     }
